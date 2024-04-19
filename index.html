@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #FFE0E6; /* light pink background color */
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #mainText {
+            margin-bottom: 20px;
+        }
+        #additionalText {
+            display: none;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #FF69B4; /* pink button color */
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #FF1493; /* darker pink button color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Hallo Baby</h1>
+        <div id="mainText">
+            <p>Rate mal wen ich mehr als alles andere Liebe</p>
+            <button onclick="revealText()">Zeig mir wen du mehr als alles andere liebst</button>
+        </div>
+        <div id="additionalText">
+            <p>Der Jaspar liebt nur Celine.</p>
+            <p>üBER ALLES MEIN BABY</p>
+        </div>
+    </div>
+
+    <script>
+        function revealText() {
+            var mainText = document.getElementById("mainText");
+            var additionalText = document.getElementById("additionalText");
+            var button = mainText.querySelector("button");
+            additionalText.style.display = "block";
+            button.style.display = "none";
+        }
+    </script>
+</body>
+</html>
